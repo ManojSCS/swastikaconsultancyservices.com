@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastika Consultancy Services | Accounting & Compliance Experts</title>
+
+    <meta name="description" content="Professional Accounting, GST Filing, TDS Filing, ITR, ROC Compliance, MSME Registration, Company Registration, Bookkeeping and Business Consultancy Services.">
+
+    <meta name="keywords" content="GST Filing, TDS Filing, ITR Filing, Accounting Services, Bookkeeping, ROC Compliance, MSME Registration, Company Registration, PAN Application, Business Consultancy">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            line-height:1.6;
+            color:#333;
+        }
+
+        header{
+            background:#0d47a1;
+            color:#fff;
+            padding:15px 5%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        nav ul{
+            list-style:none;
+            display:flex;
+            gap:20px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+        }
+
+        .hero{
+            background:linear-gradient(rgba(13,71,161,.8),rgba(13,71,161,.8)),
+            url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');
+            background-size:cover;
+            background-position:center;
+            color:white;
+            text-align:center;
+            padding:120px 20px;
+        }
+
+        .hero h1{
+            font-size:48px;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:20px;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            background:white;
+            color:#0d47a1;
+            padding:12px 25px;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        section{
+            padding:70px 8%;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:30px;
+            color:#0d47a1;
+        }
+
+        .services{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:#f5f7fa;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,.1);
+        }
+
+        .card h3{
+            color:#0d47a1;
+            margin-bottom:10px;
+        }
+
+        .why-us{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .testimonial{
+            background:#f5f7fa;
+            padding:20px;
+            border-radius:10px;
+            margin-bottom:15px;
+        }
+
+        form{
+            max-width:600px;
+            margin:auto;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        button{
+            background:#0d47a1;
+            color:white;
+            border:none;
+            padding:12px 25px;
+            cursor:pointer;
+            border-radius:5px;
+        }
+
+        footer{
+            background:#0d47a1;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .whatsapp{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#25D366;
+            color:white;
+            padding:15px;
+            border-radius:50%;
+            text-decoration:none;
+            font-size:22px;
+        }
+
+        @media(max-width:768px){
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+
+            .hero h1{
+                font-size:32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        SCS | Swastika Consultancy Services
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Swastika Consultancy Services</h1>
+    <p>Your Trusted Partner in Accounting & Compliance</p>
+
+    <a href="#contact" class="btn">Get Free Consultation</a>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+
+    <p style="text-align:center;max-width:900px;margin:auto;">
+        Swastika Consultancy Services provides professional accounting,
+        bookkeeping, taxation and business compliance solutions for
+        startups, SMEs and growing businesses across India.
+        We help businesses stay compliant while focusing on growth.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Bookkeeping & Accounting</h3>
+            <p>Complete accounting and financial record management.</p>
+        </div>
+
+        <div class="card">
+            <h3>GST Registration & Filing</h3>
+            <p>GST registration, return filing and compliance support.</p>
+        </div>
+
+        <div class="card">
+            <h3>TDS Return Filing</h3>
+            <p>Accurate and timely TDS return filing services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Income Tax Return (ITR)</h3>
+            <p>ITR filing for individuals, firms and companies.</p>
+        </div>
+
+        <div class="card">
+            <h3>Company Registration</h3>
+            <p>Pvt Ltd, LLP, OPC and Startup Registration services.</p>
+        </div>
+
+        <div class="card">
+            <h3>MSME Registration</h3>
+            <p>Udyam registration and MSME advisory services.</p>
+        </div>
+
+        <div class="card">
+            <h3>ROC Compliance</h3>
+            <p>Annual filings and company compliance management.</p>
+        </div>
+
+        <div class="card">
+            <h3>PAN & TAN Application</h3>
+            <p>New PAN/TAN application and correction services.</p>
+        </div>
+
+        <div class="card">
+            <h3>Payroll Services</h3>
+            <p>Salary processing, PF, ESIC and payroll compliance.</p>
+        </div>
+
+        <div class="card">
+            <h3>Stock Management</h3>
+            <p>Inventory and stock management solutions.</p>
+        </div>
+
+        <div class="card">
+            <h3>Business Consultancy</h3>
+            <p>Business planning and compliance advisory services.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Why Choose Us</h2>
+
+    <div class="why-us">
+
+        <div class="card">
+            <h3>Expert Guidance</h3>
+            <p>Professional support from experienced consultants.</p>
+        </div>
+
+        <div class="card">
+            <h3>Timely Compliance</h3>
+            <p>Never miss important tax and compliance deadlines.</p>
+        </div>
+
+        <div class="card">
+            <h3>Affordable Services</h3>
+            <p>Cost-effective solutions for businesses of all sizes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Client Focused</h3>
+            <p>Dedicated support and personalized service.</p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Industries We Serve</h2>
+
+    <div class="services">
+
+        <div class="card">Manufacturing</div>
+        <div class="card">Trading</div>
+        <div class="card">E-Commerce</div>
+        <div class="card">Service Providers</div>
+        <div class="card">Startups</div>
+        <div class="card">Professionals</div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Client Testimonials</h2>
+
+    <div class="testimonial">
+        "Excellent accounting and GST support. Highly recommended."
+    </div>
+
+    <div class="testimonial">
+        "Professional team with timely compliance services."
+    </div>
+
+    <div class="testimonial">
+        "Reliable consultancy partner for our business."
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form action="https://formsubmit.co/manoj@swastikaconsultancyservices.com" method="POST">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <input type="tel" name="phone" placeholder="Mobile Number">
+
+        <textarea rows="5" name="message" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Inquiry</button>
+
+    </form>
+
+    <br>
+
+    <p style="text-align:center;">
+        📞 +91 8011948490<br>
+        📧 manoj@swastikaconsultancyservices.com
+    </p>
+</section>
+
+<footer>
+    <p>
+        © 2026 Swastika Consultancy Services. All Rights Reserved.
+    </p>
+</footer>
+
+<a class="whatsapp"
+href="https://wa.me/918011948490"
+target="_blank">
+💬
+</a>
+
+</body>
+</html>
