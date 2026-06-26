@@ -578,6 +578,154 @@
 
 <!-- ========================= JAVASCRIPT ========================= -->
 
+<script>
+// Shopping Cart Functions
+let cart = [];
+
+function toggleCart() {
+    const modal = document.getElementById('cartModal');
+    if (modal.style.display === 'block') {
+        modal.style.display = 'none';
+    } else {
+        modal.style.display = 'block';
+        displayCart();
+    }
+}
+
+function addToCart(packageName, price) {
+    const item = {
+        id: Date.now(),
+        name: packageName,
+        price: price,
+        quantity: 1
+    };
+    cart.push(item);
+    updateCartCount();
+    alert(`${packageName} added to cart!`);
+}
+
+function updateCartCount() {
+    const count = cart.length;
+    document.getElementById('cartCount').textContent = count;
+}
+
+function displayCart() {
+    const cartItemsDiv = document.getElementById('cartItems');
+    const cartTotalSpan = document.getElementById('cartTotal');
+    
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        cartTotalSpan.textContent = '₹0';
+        return;
+    }
+    
+    let total = 0;
+    let itemsHTML = '<ul class="cart-item-list">';
+    
+    cart.forEach(item => {
+        itemsHTML += `
+            <li>
+                <span>${item.name}</span>
+                <span>₹${item.price}</span>
+                <button onclick="removeFromCart(${item.id})">Remove</button>
+            </li>
+        `;
+        total += item.price;
+    });
+    
+    itemsHTML += '</ul>';
+    cartItemsDiv.innerHTML = itemsHTML;
+    cartTotalSpan.textContent = '₹' + total;
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    updateCartCount();
+    displayCart();
+}
+
+function proceedToCheckout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    alert('Proceeding to checkout...');
+    // Add payment gateway integration here
+}
+
+// Contact Form Handler
+function handleContactSubmit(event) {
+    event.preventDefault();
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    
+    // Basic validation
+    if (!fullName || !email || !phone || service === 'Select Service') {
+        alert('Please fill all required fields');
+        return;
+    }
+    
+    // Store data (you can replace with backend API call)
+    localStorage.setItem('inquiry_' + Date.now(), JSON.stringify({
+        fullName,
+        email,
+        phone,
+        service,
+        timestamp: new Date()
+    }));
+    
+    alert('Thank you! We will contact you soon.');
+    document.getElementById('contactForm').reset();
+}
+
+// FAQ Toggle
+function toggleFAQ(element) {
+    const icon = element.querySelector('i');
+    icon.classList.toggle('fa-plus');
+    icon.classList.toggle('fa-minus');
+    
+    const nextP = element.nextElementSibling;
+    if (nextP.style.display === 'none' || nextP.style.display === '') {
+        nextP.style.display = 'block';
+    } else {
+        nextP.style.display = 'none';
+    }
+}
+
+// Mobile Menu Toggle
+document.getElementById('menuToggle')?.addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+});
+
+// Close cart modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('cartModal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Swastika Consultancy Services - Website Loaded');
+    updateCartCount();
+});
+</script>
+
 <script src="js/script.js"></script>
 
 </body>
