@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Login | Swastika Consultancy Services</title>
+
+    <meta name="description"
+        content="Login to your Swastika Consultancy Services client portal to manage your accounting, GST, taxation and documents.">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Login CSS -->
+
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+<!-- ===============================
+        LOADING SCREEN
+================================ -->
+
+<div class="loader" id="loader">
+
+    <div class="loader-box">
+
+        <div class="loader-circle"></div>
+
+        <h3>Swastika Consultancy Services</h3>
+
+        <p>Loading Client Portal...</p>
+
+    </div>
+
+</div>
+
+<!-- ===============================
+        LOGIN CONTAINER
+================================ -->
+
+<section class="login-section">
+
+<div class="login-container">
+
+<!-- LEFT SIDE -->
+
+<div class="login-left">
+
+<div class="brand">
+
+<img src="images/logo.png"
+alt="Swastika Consultancy Services Logo">
+
+<h1>
+
+Swastika Consultancy Services
+
+</h1>
+
+<p>
+
+Professional Accounting, GST, Income Tax,
+Bookkeeping & Business Compliance Services.
+
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+<span>Secure Client Portal</span>
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+<span>Upload Business Documents</span>
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+<span>Download Reports Anytime</span>
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+<span>Track GST & Accounting Status</span>
+
+</div>
+
+<div class="feature-item">
+
+<i class="fas fa-check-circle"></i>
+
+<span>Priority Client Support</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="login-right">
+
+<div class="login-card">
+
+<h2>
+
+Welcome Back
+
+</h2>
+
+<p>
+
+Login to your client account.
+
+</p>
+
+<form id="loginForm">
+
+<!-- EMAIL -->
+
+<div class="input-group">
+
+<label>
+
+Email Address
+
+</label>
+
+<div class="input-box">
+
+<i class="fas fa-envelope"></i>
+
+<input
+
+type="email"
+
+id="email"
+
+placeholder="Enter your email"
+
+required
+
+>
+
+</div>
+
+</div>
+
+<!-- PASSWORD -->
+
+<div class="input-group">
+
+<label>
+
+Password
+
+</label>
+
+<div class="input-box">
+
+<i class="fas fa-lock"></i>
+
+<input
+
+type="password"
+
+id="password"
+
+placeholder="Enter your password"
+
+required
+
+>
+
+<button
+
+type="button"
+
+id="togglePassword"
+
+class="toggle-password">
+
+<i class="fas fa-eye"></i>
+
+</button>
+
+</div>
+
+</<!-- ===============================
+        LOGIN OPTIONS
+================================ -->
+
+<div class="login-options">
+
+    <label class="remember-me">
+
+        <input
+            type="checkbox"
+            id="rememberMe">
+
+        <span>Remember Me</span>
+
+    </label>
+
+    <a
+        href="#"
+        id="forgotPassword"
+        class="forgot-link">
+
+        Forgot Password?
+
+    </a>
+
+</div>
+
+<!-- LOGIN BUTTON -->
+
+<button
+    type="submit"
+    class="login-btn">
+
+    <i class="fas fa-right-to-bracket"></i>
+
+    Login
+
+</button>
+
+<!-- ERROR MESSAGE -->
+
+<div
+    id="loginError"
+    class="error-message">
+
+</div>
+
+<!-- SUCCESS MESSAGE -->
+
+<div
+    id="loginSuccess"
+    class="success-message">
+
+</div>
+
+<!-- DIVIDER -->
+
+<div class="divider">
+
+    <span>
+
+        OR
+
+    </span>
+
+</div>
+
+<!-- REGISTER -->
+
+<div class="register-box">
+
+    <p>
+
+        Don't have an account?
+
+    </p>
+
+    <a
+        href="register.html"
+        class="register-btn">
+
+        Create Account
+
+    </a>
+
+</div>
+
+<!-- SECURITY INFO -->
+
+<div class="security-box">
+
+    <div class="security-item">
+
+        <i class="fas fa-shield-halved"></i>
+
+        <span>
+
+            Secure Firebase Authentication
+
+        </span>
+
+    </div>
+
+    <div class="security-item">
+
+        <i class="fas fa-lock"></i>
+
+        <span>
+
+            Your information is encrypted and protected.
+
+        </span>
+
+    </div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  
+  <!-- ===================================
+        FORGOT PASSWORD MODAL
+==================================== -->
+
+<div id="forgotModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-modal" id="closeModal">
+
+            &times;
+
+        </span>
+
+        <h2>
+
+            Reset Password
+
+        </h2>
+
+        <p>
+
+            Enter your registered email address.
+            We will send you a password reset link.
+
+        </p>
+
+        <form id="resetForm">
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <div class="input-box">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="resetEmail"
+                        placeholder="Enter your registered email"
+                        required>
+
+                </div>
+
+            </div>
+
+            <button
+                type="submit"
+                class="login-btn">
+
+                Send Reset Link
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- ===================================
+        LOGIN LOADING
+==================================== -->
+
+<div
+    id="loginLoading"
+    class="loading-overlay">
+
+    <div class="loading-box">
+
+        <div class="spinner"></div>
+
+        <h3>
+
+            Please Wait...
+
+        </h3>
+
+        <p>
+
+            Signing you into your account.
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ===================================
+        FOOTER
+==================================== -->
+
+<footer class="login-footer">
+
+    <p>
+
+        © <span id="currentYear"></span>
+        Swastika Consultancy Services
+
+    </p>
+
+    <p>
+
+        All Rights Reserved.
+
+    </p>
+
+</footer>div>
+
+<!-- ===================================
+        FIREBASE & JAVASCRIPT
+==================================== -->
+
+<!-- Firebase Configuration -->
+<script type="module" src="js/firebase-config.js"></script>
+
+<!-- Authentication -->
+<script type="module" src="js/auth.js"></script>
+
+<!-- Login Page Script -->
+<script>
+    // Current Year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Loader
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+
+        if (loader) {
+            setTimeout(() => {
+                loader.style.opacity = "0";
+                loader.style.visibility = "hidden";
+            }, 600);
+        }
+    });
+
+    // Show / Hide Password
+    const togglePassword = document.getElementById("togglePassword");
+    const password = document.getElementById("password");
+
+    if (togglePassword && password) {
+
+        togglePassword.addEventListener("click", () => {
+
+            const type =
+                password.getAttribute("type") === "password"
+                    ? "text"
+                    : "password";
+
+            password.setAttribute("type", type);
+
+            togglePassword.innerHTML =
+                type === "password"
+                    ? '<i class="fas fa-eye"></i>'
+                    : '<i class="fas fa-eye-slash"></i>';
+
+        });
+
+    }
+
+    // Forgot Password Modal
+    const forgotBtn = document.getElementById("forgotPassword");
+    const modal = document.getElementById("forgotModal");
+    const closeBtn = document.getElementById("closeModal");
+
+    if (forgotBtn && modal) {
+
+        forgotBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            modal.style.display = "flex";
+        });
+
+    }
+
+    if (closeBtn) {
+
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+
+    }
+
+    window.onclick = function (event) {
+
+        if (event.target === modal) {
+
+            modal.style.display = "none";
+
+        }
+
+    };
+</script>
+
+</body>
+
+</html>  
