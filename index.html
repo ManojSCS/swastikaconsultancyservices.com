@@ -1,1023 +1,1143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swastika Consultancy Services | Accounting, GST, ITR, ROC & Compliance</title>
-  <meta name="description" content="Swastika Consultancy Services provides professional accounting, bookkeeping, GST, TDS, ITR filing, ROC compliance, company registration, PAN, MSME, and more." />
-  <meta name="keywords" content="GST filing, ITR filing, TDS, ROC compliance, company registration, MSME, PAN apply, bookkeeping, accounting, Swastika Consultancy" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <title>Swastika Consultancy Services | Accounting | GST | ITR | TDS</title>
 
-    :root {
-      --navy: #0B2545;
-      --navy-mid: #163E6E;
-      --navy-light: #1E538F;
-      --gold: #C9973A;
-      --gold-light: #E8B95A;
-      --gold-pale: #FDF4E3;
-      --white: #FFFFFF;
-      --off-white: #F7F9FC;
-      --text-dark: #0D1B2A;
-      --text-mid: #3A4A5C;
-      --text-muted: #6B7A8D;
-      --border: #D6E0EC;
-      --section-alt: #EEF3FA;
-    }
+    <meta name="description"
+        content="Professional Accounting, GST Filing, Income Tax, TDS, ROC Compliance and Business Registration Services.">
 
-    html { scroll-behavior: smooth; }
+    <meta name="keywords"
+        content="GST Filing, Accounting, Bookkeeping, TDS, ITR, Company Registration, Swastika Consultancy">
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: var(--white);
-      line-height: 1.7;
-      font-size: 16px;
-    }
+    <!-- Google Font -->
 
-    /* ── NAV ── */
-    nav {
-      background: var(--navy);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 2px solid var(--gold);
-    }
-    .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .brand-icon {
-      width: 44px; height: 44px;
-      background: var(--gold);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--navy);
-      flex-shrink: 0;
-    }
-    .brand-text { display: flex; flex-direction: column; }
-    .brand-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-    }
-    .brand-sub { font-size: 10px; color: var(--gold-light); letter-spacing: 1.5px; text-transform: uppercase; }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    .nav-links { display: flex; gap: 4px; list-style: none; }
-    .nav-links a {
-      color: #BFD1E8;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,0.1); color: var(--white); }
-    .nav-cta {
-      background: var(--gold) !important;
-      color: var(--navy) !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--gold-light) !important; }
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: 0.3s; }
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
 
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a4a7a 100%);
-      min-height: 560px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -80px;
-      width: 420px; height: 420px;
-      border: 60px solid rgba(201,151,58,0.12);
-      border-radius: 50%;
-    }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: -60px;
-      width: 280px; height: 280px;
-      border: 40px solid rgba(201,151,58,0.08);
-      border-radius: 50%;
-    }
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 24px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-      width: 100%;
-    }
-    .hero-tag {
-      display: inline-block;
-      background: rgba(201,151,58,0.2);
-      border: 1px solid rgba(201,151,58,0.4);
-      color: var(--gold-light);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 4vw, 50px);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-    .hero h1 span { color: var(--gold-light); }
-    .hero p {
-      font-size: 17px;
-      color: #BFD1E8;
-      margin-bottom: 36px;
-      max-width: 480px;
-    }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      font-weight: 600;
-      font-size: 15px;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      display: inline-block;
-      transition: background 0.2s, transform 0.1s;
-    }
-    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      font-weight: 600;
-      font-size: 15px;
-      padding: 13px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.3);
-      display: inline-block;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.08); }
+    <!-- Font Awesome -->
 
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    .stat-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 12px;
-      padding: 24px 20px;
-      text-align: center;
-    }
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--gold-light);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-label { font-size: 13px; color: #9BBAD4; line-height: 1.4; }
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    /* ── TRUST BAR ── */
-    .trust-bar {
-      background: var(--gold-pale);
-      border-top: 1px solid #E8D8B0;
-      border-bottom: 1px solid #E8D8B0;
-      padding: 16px 24px;
-    }
-    .trust-bar-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      gap: 32px;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--navy);
-    }
-    .trust-icon { font-size: 18px; }
+    <!-- CSS -->
 
-    /* ── SECTIONS ── */
-    section { padding: 80px 24px; }
-    .section-inner { max-width: 1200px; margin: 0 auto; }
-    .section-tag {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(26px, 3vw, 38px);
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
-    .section-sub { font-size: 17px; color: var(--text-mid); max-width: 580px; margin-bottom: 48px; }
-    .section-header { text-align: center; }
-    .section-header .section-sub { margin: 0 auto 48px; }
+    <link rel="stylesheet" href="css/style.css">
 
-    /* ── SERVICES ── */
-    #services { background: var(--off-white); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 26px;
-      transition: box-shadow 0.25s, border-color 0.25s, transform 0.2s;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s;
-    }
-    .service-card:hover { box-shadow: 0 8px 32px rgba(11,37,69,0.12); border-color: #B5C8E0; transform: translateY(-3px); }
-    .service-card:hover::before { transform: scaleX(1); }
-    .service-icon {
-      width: 52px; height: 52px;
-      background: #E8F0FB;
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
-    .service-card h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
-    .service-card p { font-size: 14px; color: var(--text-mid); line-height: 1.65; margin-bottom: 16px; }
-    .service-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-    .tag {
-      font-size: 11px;
-      font-weight: 600;
-      background: var(--section-alt);
-      color: var(--navy-light);
-      padding: 3px 9px;
-      border-radius: 20px;
-      border: 1px solid #C5D6EE;
-    }
+    <link rel="stylesheet" href="css/responsive.css">
 
-    /* ── WHY US ── */
-    #why { background: var(--navy); }
-    #why .section-title { color: var(--white); }
-    #why .section-tag { color: var(--gold-light); }
-    #why .section-sub { color: #9BBAD4; }
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-    }
-    .why-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 14px;
-      padding: 28px 24px;
-    }
-    .why-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 42px;
-      font-weight: 700;
-      color: rgba(201,151,58,0.3);
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-    .why-card h3 { font-size: 17px; font-weight: 600; color: var(--white); margin-bottom: 10px; }
-    .why-card p { font-size: 14px; color: #8EABC8; }
-
-    /* ── PROCESS ── */
-    #process { background: var(--white); }
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0;
-      position: relative;
-    }
-    .process-steps::before {
-      content: '';
-      position: absolute;
-      top: 40px; left: 10%; right: 10%;
-      height: 2px;
-      background: repeating-linear-gradient(90deg, var(--gold) 0, var(--gold) 6px, transparent 6px, transparent 14px);
-    }
-    .step {
-      text-align: center;
-      padding: 0 16px;
-      position: relative;
-    }
-    .step-circle {
-      width: 80px; height: 80px;
-      border-radius: 50%;
-      background: var(--navy);
-      border: 3px solid var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--gold);
-      position: relative;
-      z-index: 1;
-    }
-    .step h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
-    .step p { font-size: 13px; color: var(--text-muted); }
-
-    /* ── CONTACT ── */
-    #contact { background: var(--section-alt); }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
-    }
-    .contact-info { }
-    .contact-info p { font-size: 16px; color: var(--text-mid); margin-bottom: 32px; }
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .contact-icon-box {
-      width: 48px; height: 48px;
-      background: var(--navy);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .contact-item-text strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px; }
-    .contact-item-text a, .contact-item-text span {
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--navy);
-      text-decoration: none;
-    }
-    .contact-item-text a:hover { color: var(--navy-light); text-decoration: underline; }
-
-    .contact-form {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 32px;
-    }
-    .contact-form h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: var(--navy);
-      margin-bottom: 24px;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { margin-bottom: 18px; }
-    label { display: block; font-size: 13px; font-weight: 600; color: var(--text-mid); margin-bottom: 6px; }
-    input, select, textarea {
-      width: 100%;
-      padding: 11px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      font-size: 15px;
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background: var(--white);
-      transition: border-color 0.2s;
-      outline: none;
-    }
-    input:focus, select:focus, textarea:focus { border-color: var(--navy-light); }
-    textarea { resize: vertical; min-height: 110px; }
-    .submit-btn {
-      width: 100%;
-      background: var(--navy);
-      color: var(--white);
-      font-size: 16px;
-      font-weight: 600;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-    .submit-btn:hover { background: var(--navy-light); }
-    .form-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 10px; }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--text-dark);
-      color: #8FA6BF;
-      padding: 60px 24px 32px;
-    }
-    .footer-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 48px;
-      padding-bottom: 48px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      margin-bottom: 32px;
-    }
-    .footer-brand p { font-size: 14px; margin-top: 14px; line-height: 1.7; max-width: 280px; }
-    .footer-col h4 { font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a { color: #8FA6BF; text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .footer-col ul li a:hover { color: var(--gold-light); }
-    .footer-bottom {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 13px;
-    }
-    .footer-bottom a { color: var(--gold-light); text-decoration: none; }
-
-    /* ── WHATSAPP FLOAT ── */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
-    }
-    .whatsapp-float a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #25D366;
-      color: var(--white);
-      font-size: 14px;
-      font-weight: 600;
-      padding: 12px 20px;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .whatsapp-float a:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
-    .wa-icon { font-size: 20px; }
-
-    /* ── MOBILE ── */
-    @media (max-width: 900px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: var(--navy); padding: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
-      .nav-links.open { display: flex; }
-      .nav-links a { padding: 12px 16px; }
-      .hamburger { display: flex; }
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-      .process-steps::before { display: none; }
-    }
-    @media (max-width: 540px) {
-      section { padding: 60px 16px; }
-      .hero-inner { padding: 60px 16px; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .contact-form { padding: 24px 20px; }
-    }
-  </style>
 </head>
+
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="brand">
-      <div class="brand-icon">S</div>
-      <div class="brand-text">
-        <span class="brand-name">Swastika Consultancy</span>
-        <span class="brand-sub">Professional Services</span>
-      </div>
-    </a>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="tel:+918011948490" class="nav-cta">📞 Call Now</a></li>
-    </ul>
-  </div>
+<!--=========================
+        HEADER
+==========================-->
+
+<header>
+
+<nav class="navbar">
+
+<div class="container">
+
+<div class="logo">
+
+<h2>Swastika Consultancy</h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Services</a></li>
+
+<li><a href="#">Packages</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<a href="login.html" class="login-btn">
+
+Login
+
+</a>
+
+<a href="#contact" class="consult-btn">
+
+Free Consultation
+
+</a>
+
+</div>
+
+<div class="menu-toggle">
+
+<i class="fas fa-bars"></i>
+
+</div>
+
+</div>
+
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-tag">✦ Trusted Consultancy Since Day One</div>
-      <h1>Your Compliance.<br><span>Our Expertise.</span></h1>
-      <p>Professional accounting, GST filings, ITR, ROC compliance, company registrations and more — handled with precision so you can focus on growing your business.</p>
-      <div class="hero-btns">
-        <a href="#contact" class="btn-primary">Get Free Consultation</a>
-        <a href="#services" class="btn-outline">View All Services</a>
-      </div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-card">
-        <div class="stat-number">500+</div>
-        <div class="stat-label">Clients Served</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">10+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">100%</div>
-        <div class="stat-label">On-Time Filing</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">₹0</div>
-        <div class="stat-label">Penalty Record</div>
-      </div>
-    </div>
-  </div>
-</section>
+</header>
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-bar-inner">
-    <div class="trust-item"><span class="trust-icon">✅</span> GST Registered</div>
-    <div class="trust-item"><span class="trust-icon">🏛️</span> MCA Certified</div>
-    <div class="trust-item"><span class="trust-icon">🔒</span> 100% Confidential</div>
-    <div class="trust-item"><span class="trust-icon">⚡</span> Quick Turnaround</div>
-    <div class="trust-item"><span class="trust-icon">📱</span> Online Services Available</div>
-  </div>
+<!--=========================
+        HERO SECTION
+==========================-->
+
+<section class="hero">
+
+<div class="container hero-container">
+
+<div class="hero-left">
+
+<span class="hero-tag">
+
+Trusted Accounting & Compliance Partner
+
+</span>
+
+<h1>
+
+Simplifying Your
+
+<span>Business Compliance</span>
+
+</h1>
+
+<p>
+
+Professional GST Filing, Bookkeeping, Income Tax,
+TDS, ROC Compliance and Business Registration
+Services under one roof.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#packages" class="primary-btn">
+
+View Packages
+
+</a>
+
+<a href="#contact" class="secondary-btn">
+
+Contact Us
+
+</a>
+
 </div>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-tag">What We Do</div>
-      <h2 class="section-title">Comprehensive Business & Compliance Services</h2>
-      <p class="section-sub">Everything your business needs — from day-to-day accounting to statutory filings and registrations.</p>
-    </div>
-    <div class="services-grid">
+</div>
 
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>Accounting & Bookkeeping</h3>
-        <p>Accurate, up-to-date books for your business. We maintain ledgers, prepare financial statements, and manage accounts payable/receivable.</p>
-        <div class="service-tags">
-          <span class="tag">Ledger Maintenance</span>
-          <span class="tag">P&L Statements</span>
-          <span class="tag">Balance Sheet</span>
-        </div>
-      </div>
+<div class="hero-right">
 
-      <div class="service-card">
-        <div class="service-icon">🧾</div>
-        <h3>GST Filing & Compliance</h3>
-        <p>Complete GST registration, return filing (GSTR-1, GSTR-3B, GSTR-9), and advisory. We ensure you remain fully compliant and avoid penalties.</p>
-        <div class="service-tags">
-          <span class="tag">GST Registration</span>
-          <span class="tag">GSTR-1 / 3B / 9</span>
-          <span class="tag">GST Reconciliation</span>
-        </div>
-      </div>
+<div class="hero-card">
 
-      <div class="service-card">
-        <div class="service-icon">💰</div>
-        <h3>TDS Compliance</h3>
-        <p>Timely TDS deduction, payment, and return filing (24Q, 26Q, 27Q). We handle TDS certificates and help avoid interest and penalties.</p>
-        <div class="service-tags">
-          <span class="tag">TDS Deduction</span>
-          <span class="tag">Form 24Q / 26Q</span>
-          <span class="tag">TDS Certificates</span>
-        </div>
-      </div>
+<h3>
 
-      <div class="service-card">
-        <div class="service-icon">📄</div>
-        <h3>Income Tax Return (ITR) Filing</h3>
-        <p>Hassle-free ITR filing for individuals, firms, LLPs, and companies. We optimize tax liability and ensure 100% accurate filings before deadlines.</p>
-        <div class="service-tags">
-          <span class="tag">Individual ITR</span>
-          <span class="tag">Business ITR</span>
-          <span class="tag">Tax Planning</span>
-        </div>
-      </div>
+Why Choose Us?
 
-      <div class="service-card">
-        <div class="service-icon">🏢</div>
-        <h3>Company & Firm Registration</h3>
-        <p>End-to-end registration services for Private Ltd, LLP, OPC, Partnership Firms, and Proprietorship — including MOA, AOA, and digital signatures.</p>
-        <div class="service-tags">
-          <span class="tag">Pvt Ltd Company</span>
-          <span class="tag">LLP / OPC</span>
-          <span class="tag">Partnership Firm</span>
-        </div>
-      </div>
+</h3>
 
-      <div class="service-card">
-        <div class="service-icon">📋</div>
-        <h3>ROC Compliance</h3>
-        <p>Annual filing of financial statements and returns with MCA (ROC). We handle DIR-3 KYC, AOC-4, MGT-7, and all event-based filings.</p>
-        <div class="service-tags">
-          <span class="tag">AOC-4 / MGT-7</span>
-          <span class="tag">DIR-3 KYC</span>
-          <span class="tag">MCA Filings</span>
-        </div>
-      </div>
+<ul>
 
-      <div class="service-card">
-        <div class="service-icon">🏅</div>
-        <h3>MSME Registration</h3>
-        <p>Udyam registration for micro, small, and medium enterprises to avail government schemes, subsidies, and credit benefits.</p>
-        <div class="service-tags">
-          <span class="tag">Udyam Registration</span>
-          <span class="tag">MSME Certificate</span>
-          <span class="tag">Govt Benefits</span>
-        </div>
-      </div>
+<li>✔ Professional Accounting</li>
 
-      <div class="service-card">
-        <div class="service-icon">🪪</div>
-        <h3>PAN Card Application</h3>
-        <p>Quick PAN card application and correction services for individuals, HUFs, firms, and companies through official channels.</p>
-        <div class="service-tags">
-          <span class="tag">New PAN Apply</span>
-          <span class="tag">PAN Correction</span>
-          <span class="tag">e-PAN</span>
-        </div>
-      </div>
+<li>✔ GST Return Filing</li>
 
-      <div class="service-card">
-        <div class="service-icon">⚖️</div>
-        <h3>Other Indian Compliance</h3>
-        <p>DSC (Digital Signature), IEC (Import Export Code), FSSAI, Shop Act License, professional tax, and more compliance services.</p>
-        <div class="service-tags">
-          <span class="tag">DSC / IEC</span>
-          <span class="tag">FSSAI</span>
-          <span class="tag">Shop Act</span>
-        </div>
-      </div>
+<li>✔ Income Tax Filing</li>
 
-    </div>
-  </div>
+<li>✔ ROC Compliance</li>
+
+<li>✔ Company Registration</li>
+
+<li>✔ Business Consultancy</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- WHY US -->
-<section id="why">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-tag">Why Choose Us</div>
-      <h2 class="section-title">Compliance Made Simple</h2>
-      <p class="section-sub" style="color:#9BBAD4;">We combine deep expertise with a client-first approach to deliver results that matter.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-num">01</div>
-        <h3>Expert Team</h3>
-        <p>Our qualified professionals stay updated with the latest tax laws, MCA notifications, and compliance requirements so you don't have to.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num">02</div>
-        <h3>Deadline Guarantee</h3>
-        <p>We track all filing due dates for you and ensure every return and document is submitted on time — zero late fees, zero penalties.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num">03</div>
-        <h3>Transparent Pricing</h3>
-        <p>No hidden charges. We discuss our fees upfront and offer affordable packages tailored to the size and needs of your business.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-num">04</div>
-        <h3>End-to-End Support</h3>
-        <p>From registration to annual filing and beyond, we're your single point of contact for all business and compliance needs.</p>
-      </div>
-    </div>
-  </div>
+<!--=========================
+        COMPANY STATS
+==========================-->
+
+<section class="stats">
+
+<div class="container">
+
+<div class="stat-box">
+
+<h2>500+</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>10+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>100%</h2>
+
+<p>Client Satisfaction</p>
+
+</div>
+
+<div class="stat-box">
+
+<h2>24×7</h2>
+
+<p>Support</p>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PROCESS -->
-<section id="process">
-  <div class="section-inner">
-    <div class="section-header">
-      <div class="section-tag">How It Works</div>
-      <h2 class="section-title">Get Started in 4 Simple Steps</h2>
-      <p class="section-sub">We make compliance fast, painless, and completely handled for you.</p>
+<!-- ABOUT SECTION STARTS HERE -->
+<!-- HTML PART-2 WILL CONTINUE FROM THIS POINT -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+<!--====================================
+            ABOUT SECTION
+=====================================-->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>ABOUT US</h5>
+
+            <h2>Trusted Accounting & Compliance Partner</h2>
+
+            <p>
+                Swastika Consultancy Services provides reliable accounting,
+                taxation, GST, TDS, ROC compliance and business registration
+                services for businesses across India.
+            </p>
+
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-image">
+
+                <img src="images/about.jpg" alt="About Swastika Consultancy">
+
+            </div>
+
+            <div class="about-text">
+
+                <h3>Helping Businesses Grow with Confidence</h3>
+
+                <p>
+
+                    We provide complete accounting and compliance solutions
+                    so business owners can focus on growing their business
+                    while we take care of statutory requirements.
+
+                </p>
+
+                <div class="about-features">
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>Professional Accounting</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>GST Filing & Registration</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>Income Tax Filing</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>ROC Compliance</span>
+
+                    </div>
+
+                    <div class="feature">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>Dedicated Client Support</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="process-steps">
-      <div class="step">
-        <div class="step-circle">1</div>
-        <h3>Free Consultation</h3>
-        <p>Call or WhatsApp us. We understand your requirements at no charge.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">2</div>
-        <h3>Document Collection</h3>
-        <p>Share documents securely via WhatsApp or email. We handle the rest.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">3</div>
-        <h3>Expert Processing</h3>
-        <p>Our team processes filings accurately and within the agreed timeline.</p>
-      </div>
-      <div class="step">
-        <div class="step-circle">4</div>
-        <h3>Delivery & Support</h3>
-        <p>Receive acknowledgements and certificates. Ongoing support included.</p>
-      </div>
-    </div>
-  </div>
+
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Let's Talk About Your Business</h2>
-        <p>Have questions about compliance, registration, or tax filing? Reach out today for a free consultation. We're here to help businesses across India stay compliant and stress-free.</p>
+<!--====================================
+            SERVICES
+=====================================-->
 
-        <div class="contact-item">
-          <div class="contact-icon-box">📞</div>
-          <div class="contact-item-text">
-            <strong>Phone / WhatsApp</strong>
-            <a href="tel:+918011948490">+91 80119 48490</a>
-          </div>
-        </div>
+<section class="services" id="services">
 
-        <div class="contact-item">
-          <div class="contact-icon-box">✉️</div>
-          <div class="contact-item-text">
-            <strong>Email</strong>
-            <a href="mailto:manoj@swastikaconsultancyservices.com">manoj@swastikaconsultancyservices.com</a>
-          </div>
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>OUR SERVICES</h5>
+
+            <h2>Professional Business Services</h2>
+
         </div>
 
-        <div class="contact-item">
-          <div class="contact-icon-box">🌐</div>
-          <div class="contact-item-text">
-            <strong>Website</strong>
-            <span>swastikaconsultancyservices.com</span>
-          </div>
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                <h3>GST Registration & Filing</h3>
+
+                <p>Complete GST registration and monthly/annual return filing.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-calculator"></i>
+
+                <h3>Accounting & Bookkeeping</h3>
+
+                <p>Professional bookkeeping and financial reporting.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-money-check-dollar"></i>
+
+                <h3>Income Tax Return</h3>
+
+                <p>ITR filing for Individuals, Firms and Companies.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-receipt"></i>
+
+                <h3>TDS Return Filing</h3>
+
+                <p>TDS calculation, payment and quarterly return filing.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3>Company Registration</h3>
+
+                <p>Pvt Ltd, LLP, OPC and Partnership Registration.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                <h3>ROC Compliance</h3>
+
+                <p>Annual ROC filing and company compliance services.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <h3>PAN / TAN Services</h3>
+
+                <p>New PAN, TAN and correction services.</p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3>Payroll Management</h3>
+
+                <p>Employee salary processing and payroll compliance.</p>
+
+            </div>
+
         </div>
 
-        <div class="contact-item">
-          <div class="contact-icon-box">🕐</div>
-          <div class="contact-item-text">
-            <strong>Working Hours</strong>
-            <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form">
-        <h3>Send Us a Message</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">Full Name *</label>
-            <input type="text" id="fname" placeholder="Your name" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone *</label>
-            <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.com" />
-        </div>
-        <div class="form-group">
-          <label for="service">Service Required</label>
-          <select id="service">
-            <option value="">-- Select a service --</option>
-            <option>Accounting & Bookkeeping</option>
-            <option>GST Registration / Filing</option>
-            <option>TDS Compliance</option>
-            <option>ITR Filing</option>
-            <option>Company / Firm Registration</option>
-            <option>ROC Compliance</option>
-            <option>MSME Registration</option>
-            <option>PAN Card Application</option>
-            <option>Other Compliance</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Briefly describe your requirement..."></textarea>
-        </div>
-        <button class="submit-btn" onclick="handleSubmit()">Send Message →</button>
-        <p class="form-note">🔒 Your information is kept strictly confidential.</p>
-      </div>
     </div>
-  </div>
+
 </section>
 
-<!-- FOOTER -->
+<!--====================================
+          YEARLY PACKAGES
+=====================================-->
+
+<section class="packages" id="packages">
+
+<div class="container">
+
+<div class="section-title">
+
+<h5>YEARLY PACKAGES</h5>
+
+<h2>Affordable Annual Service Plans</h2>
+
+<p>Select the package that best suits your business.</p>
+
+</div>
+
+<div class="package-grid">
+
+<div class="package-card">
+
+<h3>GST Package</h3>
+
+<h1>₹5,000</h1>
+
+<p>Per Year</p>
+
+<ul>
+
+<li>✔ GST Return Filing</li>
+
+<li>✔ Annual Return</li>
+
+<li>✔ GST Support</li>
+
+<li>✔ Email Assistance</li>
+
+</ul>
+
+<a href="#contact" class="package-btn">
+
+Choose Plan
+
+</a>
+
+</div>
+
+<div class="package-card">
+
+<h3>Accounting Basic</h3>
+
+<h1>₹15,000</h1>
+
+<p>Per Year</p>
+
+<ul>
+
+<li>✔ Bookkeeping</li>
+
+<li>✔ Ledger Maintenance</li>
+
+<li>✔ GST Reports</li>
+
+<li>✔ Monthly Reports</li>
+
+</ul>
+
+<a href="#contact" class="package-btn">
+
+Choose Plan
+
+</a>
+
+</div>
+
+<div class="package-card popular">
+
+<span class="popular-badge">
+
+Most Popular
+
+</span>
+
+<h3>Accounting Normal</h3>
+
+<h1>₹20,000</h1>
+
+<p>Per Year</p>
+
+<ul>
+
+<li>✔ Accounting</li>
+
+<li>✔ GST Filing</li>
+
+<li>✔ TDS Return</li>
+
+<li>✔ MIS Reports</li>
+
+<li>✔ Phone Support</li>
+
+</ul>
+
+<a href="#contact" class="package-btn">
+
+Choose Plan
+
+</a>
+
+</div>
+
+<div class="package-card premium">
+
+<span class="popular-badge">
+
+Best Value
+
+</span>
+
+<h3>Accounting Standard</h3>
+
+<h1>₹25,000</h1>
+
+<p>Per Year</p>
+
+<ul>
+
+<li>✔ Complete Accounting</li>
+
+<li>✔ GST Filing</li>
+
+<li>✔ TDS Return</li>
+
+<li>✔ Payroll</li>
+
+<li>✔ Priority Support</li>
+
+<li>✔ Monthly Review Meeting</li>
+
+</ul>
+
+<a href="#contact" class="package-btn">
+
+Choose Plan
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HTML PART-3 STARTS FROM HERE -->
+
+<!--====================================
+        WHY CHOOSE US
+=====================================-->
+
+<section class="why-us" id="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h5>WHY CHOOSE US</h5>
+            <h2>Why Businesses Trust Swastika Consultancy Services</h2>
+            <p>We provide reliable accounting and compliance solutions with a commitment to quality and timely service.</p>
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+                <i class="fas fa-user-tie"></i>
+                <h3>Experienced Professionals</h3>
+                <p>Qualified experts handling accounting, GST, taxation and compliance.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-clock"></i>
+                <h3>On-Time Filing</h3>
+                <p>We help ensure your statutory filings are completed before due dates.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-hand-holding-dollar"></i>
+                <h3>Affordable Pricing</h3>
+                <p>Transparent yearly packages with no hidden charges.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-headset"></i>
+                <h3>Dedicated Support</h3>
+                <p>Friendly support via phone, email and WhatsApp.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-lock"></i>
+                <h3>100% Confidential</h3>
+                <p>Your financial information remains secure and confidential.</p>
+            </div>
+
+            <div class="why-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Business Growth</h3>
+                <p>Helping businesses stay compliant while focusing on growth.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+      INDUSTRIES WE SERVE
+=====================================-->
+
+<section class="industries">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h5>INDUSTRIES WE SERVE</h5>
+            <h2>Serving Businesses Across Multiple Industries</h2>
+        </div>
+
+        <div class="industry-grid">
+
+            <div class="industry-card">
+                <i class="fas fa-store"></i>
+                <h3>Retail Businesses</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-industry"></i>
+                <h3>Manufacturing</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>IT Companies</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-truck"></i>
+                <h3>Transport</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-utensils"></i>
+                <h3>Restaurants</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-building"></i>
+                <h3>Construction</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-hospital"></i>
+                <h3>Healthcare</h3>
+            </div>
+
+            <div class="industry-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Education</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        TESTIMONIALS
+=====================================-->
+
+<section class="testimonials" id="testimonials">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>CLIENT TESTIMONIALS</h5>
+
+            <h2>What Our Clients Say</h2>
+
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+
+                <i class="fas fa-quote-left"></i>
+
+                <p>
+                    Excellent accounting service. All GST returns are filed on
+                    time and the team is always helpful.
+                </p>
+
+                <h4>Rahul Sharma</h4>
+
+                <span>Business Owner</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <i class="fas fa-quote-left"></i>
+
+                <p>
+                    Professional team with transparent pricing.
+                    Highly recommended for accounting and taxation.
+                </p>
+
+                <h4>Neha Gupta</h4>
+
+                <span>Retail Business</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <i class="fas fa-quote-left"></i>
+
+                <p>
+                    Swastika Consultancy has simplified our business compliance.
+                    Great support throughout the year.
+                </p>
+
+                <h4>Amit Verma</h4>
+
+                <span>Manufacturing Company</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+            FAQ
+=====================================-->
+
+<section class="faq" id="faq">
+
+<div class="container">
+
+<div class="section-title">
+
+<h5>FREQUENTLY ASKED QUESTIONS</h5>
+
+<h2>Got Questions? We've Got Answers</h2>
+
+</div>
+
+<div class="faq-container">
+
+<div class="faq-item">
+
+<h3>Do you provide online accounting services?</h3>
+
+<p>Yes. We provide online accounting, GST filing, taxation and compliance services across India.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Can you handle monthly GST returns?</h3>
+
+<p>Yes. We manage monthly, quarterly and annual GST return filing for eligible businesses.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>Do you offer yearly accounting packages?</h3>
+
+<p>Yes. We offer affordable yearly packages designed for businesses of different sizes.</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>How can I contact your team?</h3>
+
+<p>You can reach us by phone, WhatsApp, email or by submitting the contact form on the website.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--====================================
+        CALL TO ACTION
+=====================================-->
+
+<section class="cta">
+
+<div class="container">
+
+<div class="cta-box">
+
+<h2>Ready to Simplify Your Business Compliance?</h2>
+
+<p>
+
+Let Swastika Consultancy Services take care of your accounting,
+GST, taxation and compliance while you focus on growing your business.
+
+</p>
+
+<a href="#contact" class="primary-btn">
+
+Get Free Consultation
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- HTML PART-4 STARTS FROM HERE -->
+
+<!--====================================
+        CONTACT SECTION
+=====================================-->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h5>CONTACT US</h5>
+
+            <h2>Get Free Business Consultation</h2>
+
+            <p>
+                We'd love to hear from you. Fill out the form below and our team
+                will get back to you shortly.
+            </p>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <!-- Contact Information -->
+
+            <div class="contact-info">
+
+                <div class="info-box">
+
+                    <i class="fas fa-phone-alt"></i>
+
+                    <div>
+
+                        <h4>Call Us</h4>
+
+                        <p>+91 XXXXX XXXXX</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-envelope"></i>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <p>info@swastikaconsultancyservices.com</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fab fa-whatsapp"></i>
+
+                    <div>
+
+                        <h4>WhatsApp</h4>
+
+                        <p>Available 9:00 AM - 7:00 PM</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fas fa-clock"></i>
+
+                    <div>
+
+                        <h4>Working Hours</h4>
+
+                        <p>Monday - Saturday</p>
+
+                        <p>09:30 AM - 07:00 PM</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+
+            <div class="contact-form">
+
+                <form>
+
+                    <input type="text" placeholder="Full Name" required>
+
+                    <input type="text" placeholder="Business Name">
+
+                    <input type="email" placeholder="Email Address" required>
+
+                    <input type="tel" placeholder="Mobile Number" required>
+
+                    <select required>
+
+                        <option>Select Service</option>
+
+                        <option>GST Filing</option>
+
+                        <option>Accounting</option>
+
+                        <option>Bookkeeping</option>
+
+                        <option>Income Tax Return</option>
+
+                        <option>TDS Return</option>
+
+                        <option>ROC Compliance</option>
+
+                        <option>Company Registration</option>
+
+                    </select>
+
+                    <select>
+
+                        <option>Select Package</option>
+
+                        <option>GST Package</option>
+
+                        <option>Accounting Basic</option>
+
+                        <option>Accounting Normal</option>
+
+                        <option>Accounting Standard</option>
+
+                    </select>
+
+                    <textarea rows="6" placeholder="Write Your Message"></textarea>
+
+                    <button type="submit" class="primary-btn">
+
+                        Request Free Consultation
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+            FOOTER
+=====================================-->
+
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="brand" style="text-decoration:none; display:flex; gap:12px; align-items:center;">
-        <div class="brand-icon" style="background:var(--gold); color:var(--navy); width:42px; height:42px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:20px; font-weight:700;">S</div>
-        <div>
-          <div style="font-family:'Playfair Display',serif; font-size:16px; font-weight:700; color:#fff;">Swastika Consultancy Services</div>
-          <div style="font-size:11px; color:var(--gold-light); letter-spacing:1.2px; text-transform:uppercase;">Professional Services</div>
-        </div>
-      </div>
-      <p>Your trusted partner for accounting, taxation, and compliance services. We help businesses across India stay compliant and grow confidently.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">GST Filing</a></li>
-        <li><a href="#services">ITR Filing</a></li>
-        <li><a href="#services">TDS Compliance</a></li>
-        <li><a href="#services">ROC Filing</a></li>
-        <li><a href="#services">Company Registration</a></li>
-        <li><a href="#services">MSME / PAN</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#why">Why Choose Us</a></li>
-        <li><a href="#process">Our Process</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><a href="https://www.incometax.gov.in" target="_blank">Income Tax Portal</a></li>
-        <li><a href="https://www.gst.gov.in" target="_blank">GST Portal</a></li>
-        <li><a href="https://www.mca.gov.in" target="_blank">MCA Portal</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+918011948490">+91 80119 48490</a></li>
-        <li><a href="mailto:manoj@swastikaconsultancyservices.com">manoj@swastika<br>consultancyservices.com</a></li>
-        <li><a href="#">Mon–Sat: 9AM – 7PM</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Swastika Consultancy Services. All rights reserved.</span>
-    <span>Designed for <a href="#">swastikaconsultancyservices.com</a></span>
-  </div>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Swastika Consultancy Services</h3>
+
+<p>
+
+Professional Accounting, GST Filing, Income Tax,
+Bookkeeping and Business Compliance Services.
+
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#packages">Packages</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Our Services</h3>
+
+<ul>
+
+<li>GST Filing</li>
+
+<li>Accounting</li>
+
+<li>Income Tax</li>
+
+<li>TDS Return</li>
+
+<li>ROC Compliance</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="copyright">
+
+<p>
+
+© 2026 Swastika Consultancy Services.
+All Rights Reserved.
+
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<div class="whatsapp-float">
-  <a href="https://wa.me/918011948490?text=Hello%2C%20I%20need%20help%20with%20compliance%20services." target="_blank">
-    <span class="wa-icon">💬</span> Chat on WhatsApp
-  </a>
-</div>
+<!--====================================
+        FLOATING WHATSAPP
+=====================================-->
 
-<script>
-  function handleSubmit() {
-    const name = document.getElementById('fname').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    if (!name || !phone) {
-      alert('Please enter your name and phone number.');
-      return;
-    }
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value.trim();
-    const text = encodeURIComponent(
-      `Hello Swastika Consultancy,\n\nName: ${name}\nPhone: ${phone}\nService: ${service || 'General Inquiry'}\nMessage: ${message || 'I would like to know more about your services.'}`
-    );
-    window.open(`https://wa.me/918011948490?text=${text}`, '_blank');
-  }
-</script>
-</body>
-</html>
+<a href="https://wa.me/91XXXXXXXXXX"
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swastika Consultancy Services</title>
-  <meta name="description" content="Swastika Consultancy Services provides accounting, GST, ITR, ROC compliance, registrations, and yearly service packages.">
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
-  <script defer src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
-  <script defer src="firebase.js"></script>
-  <script defer src="app.js"></script>
-</head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="#home">Swastika Consultancy Services</a>
-    <nav class="nav">
-      <a href="#services">Services</a>
-      <a href="#packages">Yearly Packages</a>
-      <a href="#login">Login</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+class="whatsapp-btn"
 
-  <main>
-    <section id="home" class="hero">
-      <div>
-        <h1>Your Compliance. Our Expertise.</h1>
-        <p>Professional accounting, GST, ITR, ROC compliance, registrations, and client-focused yearly service packages.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#packages">View Packages</a>
-          <a class="btn secondary" href="#login">Client Login</a>
-        </div>
-      </div>
-    </section>
+target="_blank">
 
-    <section id="services" class="section">
-      <h2>Services We Provide</h2>
-      <div class="grid">
-        <article class="card"><h3>Accounting</h3><p>Bookkeeping, ledgers, and financial statements.</p></article>
-        <article class="card"><h3>GST</h3><p>Registration, filing, and compliance support.</p></article>
-        <article class="card"><h3>ITR Filing</h3><p>Income tax return filing for individuals and businesses.</p></article>
-        <article class="card"><h3>ROC Compliance</h3><p>Annual filings and MCA compliance support.</p></article>
-      </div>
-    </section>
+<i class="fab fa-whatsapp"></i>
 
-    <section id="packages" class="section alt">
-      <h2>Yearly Service Packages</h2>
-      <p class="section-note">Editable pricing section for your website.</p>
-      <div class="grid">
-        <article class="card price"><h3>GST</h3><strong>₹5,000 / year</strong></article>
-        <article class="card price"><h3>Accounting Basic</h3><strong>₹15,000 / year</strong></article>
-        <article class="card price"><h3>Accounting Normal</h3><strong>₹20,000 / year</strong></article>
-        <article class="card price"><h3>Accounting Standard</h3><strong>₹25,000 / year</strong></article>
-      </div>
-    </section>
+</a>
 
-    <section id="login" class="section">
-      <h2>Client Login</h2>
-      <div class="login-box">
-        <input id="email" type="email" placeholder="Email">
-        <input id="password" type="password" placeholder="Password">
-        <div class="login-actions">
-          <button id="signupBtn" class="btn primary" type="button">Sign Up</button>
-          <button id="signinBtn" class="btn secondary" type="button">Sign In</button>
-          <button id="signoutBtn" class="btn light" type="button">Sign Out</button>
-        </div>
-        <p id="authMsg" class="auth-msg">Firebase Authentication ready.</p>
-      </div>
-    </section>
+<!--====================================
+        BACK TO TOP
+=====================================-->
 
-    <section id="contact" class="section alt">
-      <h2>Contact</h2>
-      <p>91 80119 48490 | manojswastikaconsultancyservices.com</p>
-    </section>
-  </main>
-</body>
-</html>
+<button id="topBtn">
+
+<i class="fas fa-arrow-up"></i>
+
+</button>
