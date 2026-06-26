@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account | Swastika Consultancy Services</title>
+  <link rel="stylesheet" href="register.css"/>
+</head>
+<body>
 
+<div class="container">
+
+  <!-- LEFT SIDE -->
+  <div class="left">
+    <div class="logo-box">🏢</div>
+    <h1>Create Your Account</h1>
+    <p>Join thousands of businesses managing their operations with us.</p>
+
+    <div class="features">
+      <div class="feature">🔒 Secure &amp; Reliable<br><span>Your data is protected with enterprise-grade security.</span></div>
+      <div class="feature">⚡ Save Time<br><span>Automate and simplify your business processes.</span></div>
+      <div class="feature">🎧 Dedicated Support<br><span>Our team is always here to help you succeed.</span></div>
+    </div>
+
+    <a href="login.html" class="login-btn">Login Here →</a>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right">
+    <div class="form-box">
+      <h2>Create Account</h2>
+      <p class="sub">Fill in the details below to get started</p>
+
+      <!-- FIX: Added id="registerForm" so auth.js registerForm listener works -->
+      <form id="registerForm">
+
+        <div class="row">
+          <!-- FIX: Added id="fullName" — required by auth.js -->
+          <input type="text" id="fullName" placeholder="Full Name" required>
+        </div>
+
+        <div class="row">
+          <!-- FIX: Added id="registerEmail" — required by auth.js -->
+          <input type="email" id="registerEmail" placeholder="Email Address" required>
+        </div>
+
+        <div class="row">
+          <!-- FIX: Added id="registerPassword" — required by auth.js -->
+          <input type="password" id="registerPassword" placeholder="Password" required>
+        </div>
+
+        <div class="row">
+          <!-- FIX: Added id="confirmPassword" — required by auth.js -->
+          <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+        </div>
+
+        <div class="row">
+          <input type="text" id="mobile" placeholder="Mobile Number" required>
+        </div>
+
+        <div class="row">
+          <input type="text" id="company" placeholder="Business / Company Name" required>
+        </div>
+
+        <div class="row">
+          <select id="package">
+            <option value="">Select Yearly Package</option>
+            <option value="Basic">Basic</option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+
+        <div class="terms">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to Terms &amp; Conditions</label>
+        </div>
+
+        <!-- Error / Success messages (used by auth.js) -->
+        <div id="registerError"   class="msg-error"   style="display:none;"></div>
+        <div id="registerSuccess" class="msg-success" style="display:none;"></div>
+
+        <button type="submit">Create Account</button>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!-- Firebase & Auth -->
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="auth.js"></script>
+
+</body>
+</html>
