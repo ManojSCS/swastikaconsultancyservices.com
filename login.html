@@ -1,240 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Client Login | Swastika Consultancy Services</title>
-  <meta name="description" content="Login to your Swastika Consultancy Services client portal to manage your accounting, GST, taxation and documents.">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-  <!-- FIX: was "css/login.css" — corrected to "login.css" -->
-  <link rel="stylesheet" href="login.css">
+  <meta name="description" content="Login to your Swastika Consultancy Services client portal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="login.css" />
 </head>
 <body>
 
-<!-- LOADING SCREEN -->
+<!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-box">
-    <div class="loader-circle"></div>
+    <div class="loader-logo">S</div>
     <h3>Swastika Consultancy Services</h3>
-    <p>Loading Client Portal...</p>
+    <p>Loading your secure portal…</p>
   </div>
 </div>
 
-<!-- LOGIN SECTION -->
-<section class="login-section">
-  <div class="login-container">
+<!-- MAIN WRAPPER -->
+<div class="login-wrapper">
 
-    <!-- LEFT SIDE -->
-    <div class="login-left">
-      <div class="brand">
-        <!-- If you don't have a logo image, remove the <img> tag or replace src -->
-        <!-- <img src="images/logo.png" alt="Swastika Consultancy Services Logo"> -->
-        <div class="brand-icon">🏢</div>
-        <h1>Swastika Consultancy Services</h1>
-        <p>Professional Accounting, GST, Income Tax, Bookkeeping &amp; Business Compliance Services.</p>
+  <!-- ── LEFT PANEL ── -->
+  <div class="login-left">
+    <div class="left-brand">
+      <div class="left-logo">S</div>
+      <h1>Swastika Consultancy Services</h1>
+      <p>Your trusted partner for Accounting, GST, Income Tax, TDS, ROC Compliance &amp; Business Registration.</p>
+    </div>
+
+    <div class="left-features">
+      <div class="feature-row">
+        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+        <span>Secure Client Portal — Encrypted &amp; Protected</span>
       </div>
-
-      <div class="features">
-        <div class="feature-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Secure Client Portal</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Upload Business Documents</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Download Reports Anytime</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Track GST &amp; Accounting Status</span>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-check-circle"></i>
-          <span>Priority Client Support</span>
-        </div>
+      <div class="feature-row">
+        <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <span>Upload &amp; Manage Business Documents</span>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <span>Track GST, TDS &amp; Accounting Status</span>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon"><i class="fas fa-download"></i></div>
+        <span>Download Reports &amp; Certificates Anytime</span>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <span>Priority Support from Our Expert Team</span>
       </div>
     </div>
 
-    <!-- RIGHT SIDE -->
-    <div class="login-right">
-      <div class="login-card">
-        <h2>Welcome Back</h2>
-        <p>Login to your client account.</p>
-
-        <form id="loginForm">
-
-          <!-- EMAIL -->
-          <div class="input-group">
-            <label>Email Address</label>
-            <div class="input-box">
-              <i class="fas fa-envelope"></i>
-              <input type="email" id="email" placeholder="Enter your email" required>
-            </div>
-          </div>
-
-          <!-- PASSWORD -->
-          <div class="input-group">
-            <label>Password</label>
-            <div class="input-box">
-              <i class="fas fa-lock"></i>
-              <input type="password" id="password" placeholder="Enter your password" required>
-              <!-- FIX: was inside a broken closing tag </div> -->
-              <button type="button" id="togglePassword" class="toggle-password">
-                <i class="fas fa-eye"></i>
-              </button>
-            </div>
-          </div>
-
-          <!-- LOGIN OPTIONS -->
-          <div class="login-options">
-            <label class="remember-me">
-              <input type="checkbox" id="rememberMe">
-              <span>Remember Me</span>
-            </label>
-            <a href="#" id="forgotPassword" class="forgot-link">Forgot Password?</a>
-          </div>
-
-          <!-- LOGIN BUTTON -->
-          <button type="submit" class="login-btn">
-            <i class="fas fa-right-to-bracket"></i>
-            Login
-          </button>
-
-          <!-- ERROR MESSAGE -->
-          <div id="loginError" class="error-message"></div>
-
-          <!-- SUCCESS MESSAGE -->
-          <div id="loginSuccess" class="success-message"></div>
-
-          <!-- DIVIDER -->
-          <div class="divider"><span>OR</span></div>
-
-          <!-- REGISTER -->
-          <div class="register-box">
-            <p>Don't have an account?</p>
-            <a href="register.html" class="register-btn">Create Account</a>
-          </div>
-
-          <!-- SECURITY INFO -->
-          <div class="security-box">
-            <div class="security-item">
-              <i class="fas fa-shield-halved"></i>
-              <span>Secure Firebase Authentication</span>
-            </div>
-            <div class="security-item">
-              <i class="fas fa-lock"></i>
-              <span>Your information is encrypted and protected.</span>
-            </div>
-          </div>
-
-        </form>
-      </div>
+    <div class="left-footer">
+      © <span id="yr"></span> Swastika Consultancy Services · All Rights Reserved
     </div>
-
   </div>
-</section>
+
+  <!-- ── RIGHT PANEL ── -->
+  <div class="login-right">
+    <div class="login-card">
+
+      <div class="card-header">
+        <div class="card-icon"><i class="fas fa-right-to-bracket"></i></div>
+        <h2>Welcome Back</h2>
+        <p>Sign in to your client account</p>
+      </div>
+
+      <form id="loginForm" novalidate>
+
+        <!-- EMAIL -->
+        <div class="field-group">
+          <label for="email">Email Address</label>
+          <div class="field-wrap">
+            <i class="fas fa-envelope fi-icon"></i>
+            <input type="email" id="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="field-group">
+          <label for="password">Password</label>
+          <div class="field-wrap">
+            <i class="fas fa-lock fi-icon"></i>
+            <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required />
+            <button type="button" class="toggle-pass" id="togglePassword" aria-label="Show password">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- EXTRAS -->
+        <div class="login-extras">
+          <label class="remember">
+            <input type="checkbox" id="rememberMe" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" id="forgotPassword" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="auth-btn" id="loginBtn">
+          <i class="fas fa-right-to-bracket"></i> Sign In
+        </button>
+
+        <!-- MESSAGES -->
+        <div id="loginError"   class="msg-box error"></div>
+        <div id="loginSuccess" class="msg-box success"></div>
+
+        <!-- DIVIDER -->
+        <div class="or-divider"><span>Don't have an account?</span></div>
+
+        <!-- REGISTER LINK -->
+        <div class="register-prompt">
+          <a href="register.html"><i class="fas fa-user-plus"></i> Create a new account</a>
+        </div>
+
+        <!-- SECURITY STRIP -->
+        <div class="security-strip">
+          <i class="fas fa-shield-halved"></i>
+          <span>Protected by Firebase Authentication. Your data is encrypted.</span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div><!-- end .login-wrapper -->
 
 <!-- FORGOT PASSWORD MODAL -->
-<div id="forgotModal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" id="closeModal">&times;</span>
+<div class="modal-backdrop" id="forgotModal">
+  <div class="modal-box">
+    <button class="modal-close-btn" id="closeModal"><i class="fas fa-times"></i></button>
+    <div class="modal-icon">🔑</div>
     <h2>Reset Password</h2>
-    <p>Enter your registered email address. We will send you a password reset link.</p>
-    <form id="resetForm">
-      <div class="input-group">
-        <label>Email Address</label>
-        <div class="input-box">
-          <i class="fas fa-envelope"></i>
-          <input type="email" id="resetEmail" placeholder="Enter your registered email" required>
+    <p>Enter your registered email and we'll send a reset link to your inbox.</p>
+    <form id="resetForm" novalidate>
+      <div class="field-group">
+        <label for="resetEmail">Registered Email</label>
+        <div class="field-wrap">
+          <i class="fas fa-envelope fi-icon"></i>
+          <input type="email" id="resetEmail" placeholder="you@example.com" required />
         </div>
       </div>
-      <button type="submit" class="login-btn">Send Reset Link</button>
+      <button type="submit" class="auth-btn" style="margin-top:4px;">
+        <i class="fas fa-paper-plane"></i> Send Reset Link
+      </button>
+      <div id="resetMsg" class="msg-box" style="margin-top:12px;"></div>
     </form>
   </div>
 </div>
 
-<!-- LOGIN LOADING OVERLAY -->
-<div id="loginLoading" class="loading-overlay">
+<!-- LOADING OVERLAY -->
+<div class="loading-overlay" id="loginLoading">
   <div class="loading-box">
-    <div class="spinner"></div>
-    <h3>Please Wait...</h3>
-    <p>Signing you into your account.</p>
+    <div class="spinner-ring"></div>
+    <h3>Please Wait…</h3>
+    <p>Signing you into your account</p>
   </div>
 </div>
 
 <!-- FOOTER -->
-<!-- FIX: was "footer...div>" with garbage text at the end -->
 <footer class="login-footer">
-  <p>© <span id="currentYear"></span> Swastika Consultancy Services</p>
-  <p>All Rights Reserved.</p>
+  © <span id="footerYr"></span> <span>Swastika Consultancy Services</span> · All Rights Reserved ·
+  <a href="index.html" style="color:rgba(255,255,255,.5); margin-left:6px;">Back to Website</a>
 </footer>
 
-<!-- Firebase & JS -->
+<!-- FIREBASE & AUTH -->
 <script type="module" src="firebase-config.js"></script>
 <script type="module" src="auth.js"></script>
 
 <script>
-  // Current Year
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
+  // Year
+  const y = new Date().getFullYear();
+  document.getElementById('yr').textContent = y;
+  document.getElementById('footerYr').textContent = y;
 
   // Loader
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-    if (loader) {
-      setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.visibility = "hidden";
-      }, 600);
-    }
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const l = document.getElementById('loader');
+      l.style.opacity = '0'; l.style.visibility = 'hidden';
+    }, 700);
   });
 
-  // Show / Hide Password
-  const togglePassword = document.getElementById("togglePassword");
-  const passwordInput = document.getElementById("password");
-  if (togglePassword && passwordInput) {
-    togglePassword.addEventListener("click", () => {
-      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
-      passwordInput.setAttribute("type", type);
-      togglePassword.innerHTML = type === "password"
-        ? '<i class="fas fa-eye"></i>'
-        : '<i class="fas fa-eye-slash"></i>';
-    });
-  }
+  // Toggle password
+  const toggleBtn = document.getElementById('togglePassword');
+  const passInput = document.getElementById('password');
+  toggleBtn.addEventListener('click', () => {
+    const isPass = passInput.type === 'password';
+    passInput.type = isPass ? 'text' : 'password';
+    toggleBtn.innerHTML = isPass
+      ? '<i class="fas fa-eye-slash"></i>'
+      : '<i class="fas fa-eye"></i>';
+  });
 
-  // Forgot Password Modal
-  const forgotBtn = document.getElementById("forgotPassword");
-  const modal = document.getElementById("forgotModal");
-  const closeBtn = document.getElementById("closeModal");
-
-  if (forgotBtn && modal) {
-    forgotBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.style.display = "flex";
-    });
-  }
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-  }
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+  // Forgot modal
+  document.getElementById('forgotPassword').addEventListener('click', e => {
+    e.preventDefault();
+    document.getElementById('forgotModal').classList.add('show');
+  });
+  document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('forgotModal').classList.remove('show');
+  });
+  document.getElementById('forgotModal').addEventListener('click', e => {
+    if (e.target === e.currentTarget)
+      e.currentTarget.classList.remove('show');
+  });
 </script>
-
 </body>
 </html>
